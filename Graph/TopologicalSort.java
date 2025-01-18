@@ -46,7 +46,9 @@ public class TopologicalSort {
         createGraph(graph);
 
         for(int i=0; i<v; i++){
-            topologicalSort(graph, i, vis, stack);
+            if(!vis[i]){
+                topologicalSort(graph, i, vis, stack);
+            }
         }
         while(!stack.isEmpty()){
             System.out.print(stack.pop()+" ");
