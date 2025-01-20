@@ -1,18 +1,30 @@
 // This class is for Testing of Small Code & Debugging
 public class Test{
-    static boolean validHyphen(String word, int index, int num){
-        num = 10;
-        return index != -1 && index != 0 && index != word.length() - 1
-            &&
-            ( (int) word.charAt(index - 1) >= 97 && (int) word.charAt(index - 1) <= 122 )
-            &&
-            ( (int) word.charAt(index + 1) >= 97 && (int) word.charAt(index + 1) <= 122 );
+    static String helper(String s, char ch, StringBuilder ans){
+        if(s.isEmpty()){
+            return ans.toString();
+        }
+        if(s.charAt(0) != ch){
+            ans.append(s.charAt(0));
+        }
+        return helper(s.substring(1), ch, ans);
+    }
+    static String removeChar(String s, char ch){
+        StringBuilder sb = new StringBuilder();
+        return helper(s, ch, sb);
     }
 
+    static void subSequence(String p, String up){
+        if(up.isEmpty()){
+            System.out.println(p);
+            return;
+        }
+        char ch = up.charAt(0);
+        subSequence(p+ch, up.substring(1));
+        subSequence(p, up.substring(1));
+    }
     public static void main(String [] args){
-        int num = 0;
-        boolean valid = validHyphen("pencil-sharpener.",6, num);
-        System.out.println(valid);
-        System.out.println(num);
+//        System.out.println(removeChar("bacaac", 'a'));
+        subSequence("","abc");
     }
 }
