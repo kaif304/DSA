@@ -19,10 +19,6 @@ public class CompletelyPaintedRowColumn2661 {
         HashMap<Integer, Integer> colCells = new HashMap<>();
 
         for(int i = 0; i < arr.length; i++){
-//            int ele = arr[i];
-//            int rowPosition = row.get(ele);
-//            int colPosition = col.get(ele);
-
             rowCells.put(row.get(arr[i]), rowCells.getOrDefault(row.get(arr[i]), 0) + 1);
             colCells.put(col.get(arr[i]), colCells.getOrDefault(col.get(arr[i]), 0) + 1);
 
