@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BFS {
-    static class Edge{
+    public static class Edge{
         int src;
         int dest;
         public Edge(int s, int d){
@@ -52,6 +52,26 @@ public class BFS {
                     Edge e = graph[curr].get(i);
                     q.add(e.dest);
                 }
+            }
+        }
+    }
+    static void bfs3(ArrayList<Integer>[] graph, int start, boolean[] vis){
+        Queue<Integer> q = new LinkedList<>();
+        q.add(start);
+
+        while (!q.isEmpty()){
+            int curr = q.poll();
+            if(!vis[curr]){
+                System.out.print(curr+" ");
+                vis[curr] = true;
+
+                for (int i = 0; i < graph[curr].size(); i++) {
+                    int e = graph[curr].get(i);
+                    if(!vis[e]){
+                        q.add(graph[curr].get(i));
+                    }
+                }
+                System.out.println(q);
             }
         }
     }
