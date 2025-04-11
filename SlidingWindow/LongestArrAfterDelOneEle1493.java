@@ -1,4 +1,5 @@
 package SlidingWindow;
+// COMPLETED
 
 public class LongestArrAfterDelOneEle1493 {
     static int longestSubarray2(int[] arr) {
@@ -9,8 +10,6 @@ public class LongestArrAfterDelOneEle1493 {
                 ones++;
                 r++;
             }
-//            1,1,0,1
-//            0,1,1,1,0,1,1,0,1
             else if(arr[r] == 0 && zeros == 0){
                 r++;
                 zeros++;
@@ -27,7 +26,6 @@ public class LongestArrAfterDelOneEle1493 {
             else {
                 max = Math.max(max, ones);
             }
-            System.out.println("Zero: "+zeros+" Ones: "+ones);
         }
 
         return max;
