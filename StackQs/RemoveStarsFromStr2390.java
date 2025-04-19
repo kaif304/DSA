@@ -6,7 +6,6 @@ public class RemoveStarsFromStr2390 {
         StringBuilder res = new StringBuilder();
 
         for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
             if(!res.isEmpty() && s.charAt(i) == '*'){
                 res.deleteCharAt(res.length()-1);
             }
