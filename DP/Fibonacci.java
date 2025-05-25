@@ -1,7 +1,5 @@
 package DP;
 
-import java.util.Arrays;
-
 public class Fibonacci {
     // Normal recursion function
     static int fibonacciNumber1(int n){

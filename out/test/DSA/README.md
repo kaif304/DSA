@@ -1,6 +1,6 @@
 # Data Structures and Algorithms Repository
 
-Welcome to my Data Structures and Algorithms repository! 🌟 This repository is a collection of my solutions to various DSA problems, solved in Java. It contains well-optimized code for a wide range of algorithmic problems, including arrays, strings, dynamic programming, trees, graphs, and much more.
+Welcome to my Data Structures and Algorithms repository! 🌟 This repository is a collection of my solutions to various DSA problems, solved in Java. It contains well-optimized code for a wide range of algorithmic problems, including Arrays, strings, dynamic programming, trees, graphs, and much more.
 
 ---
 

@@ -1,7 +1,6 @@
 package Arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class MaxMinSum3428 {
     static int dfs(ArrayList<Integer> list, int[] arr, int i, int k){
