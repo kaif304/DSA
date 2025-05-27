@@ -13,5 +13,7 @@ public class Main {
         System.out.println(trie.search("an"));
         System.out.println(trie.search("their"));
         System.out.println(trie.search("these"));
+
+        System.out.println(trie.countNodes());
     }
 }
