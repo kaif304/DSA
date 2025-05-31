@@ -4,16 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Trie trie = new Trie();
 
-        trie.insert("hello");
+//        trie.insert("hello");
+//
+//        String[] words = {"the","a","thor","there","their","any"};
+//        trie.insertWords(words);
+//
+//        System.out.println(trie.search("thor"));
+//        System.out.println(trie.search("an"));
 
-        String[] words = {"the","a","thor","there","their","any"};
-        trie.insertWords(words);
+        String word = "abcd";
+        trie.insertSuffixes(word);
 
-        System.out.println(trie.search("thor"));
-        System.out.println(trie.search("an"));
-        System.out.println(trie.search("their"));
-        System.out.println(trie.search("these"));
-
-        System.out.println(trie.countNodes());
+        System.out.println("Unique substrings: \n"+trie.allUniqueSubstrings());
     }
 }
