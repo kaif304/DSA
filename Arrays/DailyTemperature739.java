@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class DailyTemperature739 {
-    static int[] dailyTemperatures(int[] temperatures) {
+    static int[] dailyTemperatures2(int[] temperatures) {
         int[] ans = new int[temperatures.length];
         Stack<Integer> st = new Stack<>();
 
@@ -13,6 +13,30 @@ public class DailyTemperature739 {
                 ans[st.peek()] = i - st.pop();
             }
             st.add(i);
+        }
+
+        return ans;
+    }
+
+
+
+
+
+
+
+
+
+    static int[] dailyTemperatures(int[] temperatures) {
+        int n = temperatures.length;
+        int[] ans = new int[n];
+        Stack<Integer> stack = new Stack<>();
+
+        for (int i = 0; i < n; i++) {
+            while(!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]){
+                ans[stack.peek()] = i - stack.pop();
+            }
+
+            stack.push(i);
         }
 
         return ans;
