@@ -1,7 +1,7 @@
 package Backtracking;
+// COMPLETED
 
 import java.util.Arrays;
-
 public class NQueens {
     public static int counter = 0;
     static void solveNQueens(int N){
